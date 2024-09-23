@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        background-color: rgb(212, 230, 230);
+        margin: 100px;
+        width: 30%;
+        height: 300px;
+        border-color: 5px solid black;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div id="box">
+
+    </div>
+    <script src="jquery.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (event) {
+                $('#box').text("X:" + event.pageX + ' Y' + event.pageY);
+            });
+        });
+    </script>
+</body>
+
+</html>

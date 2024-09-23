@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Stop Progration</title>
+</head>
+
+<style>
+    .box {
+        margin: 20px;
+        text-align: center;
+        font-style: 2rem;
+        width: 600px;
+        background-color: rgb(219, 170, 170);
+        justify-content: center;
+    }
+
+    button {
+        background-color: yellow;
+        width: 100px;
+        height: 50px;
+        padding: 5px;
+        border: 0;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h2>
+            Text box
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus ea sequi quisquam, beatae minima
+            cupiditate harum similique blanditiis voluptates voluptate commodi possimus corrupti, deserunt rerum
+            reprehenderit perspiciatis ad illo.
+        </p>
+        <button> Test Button</button>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+
+
+            $('.box').ready(function (event) {
+                event.stopPropagation();
+                alert("The Div element was clicked");
+            });
+
+            $('button').ready(function () {
+                alert("The button was clicked");
+            });
+        });
+    </script>
+</body>
+
+</html>

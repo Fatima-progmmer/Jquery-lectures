@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Show</title>
+</head>
+<style>
+    p {
+        margin: 100px;
+        font-size: 30px;
+    }
+
+    button {
+        margin: 20px;
+        padding: 20px;
+        background-color: aquamarine;
+        color: black;
+        border-radius: 8px;
+        font-size: 20px;
+        margin-left: 300px;
+    }
+</style>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequatur eveniet consectetur quod
+        reprehenderit atque fuga natus rerum voluptates doloribus aliquid sint excepturi minima, hic architecto ratione
+        fugiat! Nemo, adipisci.
+    </p>
+    <br>
+    <button class="hide"> Hide</button>
+    <button class="show"> Show </button>
+    <button class="toggle"> Toggle</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".hide").click(function () {
+            $(".box").hide('slow', function () {
+                console.log("Now it is hidden");
+                alert("Now it is hidden");
+            });
+        });
+
+        $(".hide").click(function () {
+            $(".box").show();
+        });
+
+        $(".toggle").click(function () {
+            $(".box").toggle();
+        });
+    })
+</script>
+
+</html>

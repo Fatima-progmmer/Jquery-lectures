@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DData property</title>
+</head>
+<style>
+    #box {
+        background-color: rgb(228, 234, 150);
+        color: black;
+        width: 800px;
+        height: 200px;
+        padding: 30px;
+        margin: 50px;
+        font-size: 1rem;
+        margin-left: 180px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        padding: 10px;
+        text-align: center;
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+    <h1>Event.data</h1>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorum numquam consequuntur ipsa maiores
+            ipsam officiis, praesentium, quod quibusdam aperiam aut. Incidunt ipsam corporis dicta rem blanditiis
+            doloremque sed ullam.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, optio mollitia suscipit, ducimus possimus
+            repudiandae, dolore magni tempore voluptas nesciunt beatae officiis doloribus enim corrupti id doloremque
+            inventore incidunt aliquid.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus animi perspiciatis et modi nulla unde
+            repudiandae corrupti architecto repellendus iure adipisci neque nostrum, asperiores reprehenderit dolorem,
+            quibusdam praesentium esse magni!</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("p").each(function (i) {
+                $(this).on("click", {
+                    value: i
+                }, function (event) {
+                    alert(event.data.value)
+                })
+                )
+        };
+            });
+    </script>
+</body>
+
+</html>

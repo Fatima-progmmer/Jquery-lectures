@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example basic</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div {
+        margin: 30px;
+        font-size: 1rem;
+        padding: 10px;
+        width: 400px;
+    }
+
+    h1 {
+        font-weight: 400px;
+    }
+
+    .text1 {
+        background-color: aqua;
+    }
+
+    .text2 {
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <div class="text1">
+        <h1>
+            Royal Code
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores labore est exercitationem minima sunt
+            reprehenderit, neque quisquam, culpa ex ad id ut fugiat in perspiciatis fuga officia, harum totam maxime?
+        </p>
+    </div>
+    <div class="text2">
+        <h1>
+            Royal Code
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores labore est exercitationem minima sunt
+            reprehenderit, neque quisquam, culpa ex ad id ut fugiat in perspiciatis fuga officia, harum totam maxime?
+        </p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var a = $(".text1").html();
+            console.log(a);
+
+            var b = $(".text2").html();
+            console.log(b);
+        });
+    </script>
+</body>
+
+
+</html>

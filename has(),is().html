@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Filtering method()</title>
+</head>
+<style>
+    .box1 {
+        background-color: aqua;
+        width: 30%;
+        height: 10%;
+    }
+
+    .box2 {
+        background-color: blue;
+        width: 30%;
+        height: 20%;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis, fugiat, consectetur a error
+            illo quam sed quas eum aut architecto dolores inventore, repellat ex quod veritatis pariatur iste sapiente.
+        </p>
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    <div class="box2">
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos molestiae, ad sint perspiciatis repellendus
+            quasi aut provident laborum quos ea voluptatem recusandae consequatur temporibus, quis fugiat, laudantium
+            mollitia <span class="text">impedit iusto.</span>
+        </p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('p').has('span').css('background', 'lemi');
+
+            if ($('p').parent().is('div'))
+                console.log($('p').parent().is('div'));
+        });
+    </script>
+</body>
+
+</html>
